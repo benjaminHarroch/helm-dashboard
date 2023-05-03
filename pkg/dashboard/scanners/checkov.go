@@ -77,7 +77,7 @@ func (c *Checkov) ScanManifests(mnf string) (*subproc.ScanResults, error) {
 		return nil, err
 	}
 
-	res := &subproc.ScanResults{}
+	res := &subproc.ScanResults{
 
 	err = json.Unmarshal([]byte(out), &res.OrigReport)
 	if err != nil {
